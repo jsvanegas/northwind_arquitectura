@@ -1,0 +1,47 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="NorthwindTemplate.master.cs" Inherits="northwind.vistas.template.NorthwindTemplate" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    
+    <title>
+    <asp:ContentPlaceHolder ID="title" runat="server">
+    </asp:ContentPlaceHolder>
+    </title>
+
+    <link href="/css/teceros/bootstrap.min.css" rel="stylesheet" />
+    <link href="/css/teceros/sweetalert.css" rel="stylesheet" />
+    <link href="/css/teceros/bootstrap-datepicker.min.css" rel="stylesheet" />
+    <link href="/css/teceros/font-awesome.min.css" rel="stylesheet" />
+
+    <script src="/js/lib/jquery-3.2.1.min.js"></script>
+    <script src="/js/lib/bootstrap-datepicker.min.js"></script>
+    <script src="/js/lib/sweetalert.min.js"></script>
+
+    <script src="/js/app/global/app.dom.js"></script>
+    <script src="/js/app/global/app.global.js"></script>
+    <script src="/js/app/global/extensiones.js"></script>
+
+    <asp:ContentPlaceHolder ID="estilos" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <asp:ContentPlaceHolder ID="libs" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="divFormulario">
+        <asp:ContentPlaceHolder ID="region_editable" runat="server">
+        
+        </asp:ContentPlaceHolder>
+    </div>
+    </form>
+
+    <script>
+        __dom.divForm = $('#divFormulario');
+    </script>
+    <asp:ContentPlaceHolder ID="scripts" runat="server">
+    </asp:ContentPlaceHolder>
+</body>
+</html>
